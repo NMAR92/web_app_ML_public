@@ -3,7 +3,7 @@ import pickle
 import numpy as np
 
 app = Flask(__name__)
-model = pickle.load(open('/workspace/web_app_ML/models/titanic_model.pickle', 'rb'))
+model = pickle.load(open('titanic_model.pickle', 'rb'))
 
 @app.route('/') #http://www.google.com/
 def home():
@@ -22,4 +22,4 @@ def predict():
     return render_template('index.html', prediction_text='Would you survive? {} (1=survived, 0=deceased)'.format(output))
 
 if __name__=="__main__":
-    app.run(port=5000, debug=True)
+    app.run(debug=True, host='127.0.0.1', port=5000)
