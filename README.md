@@ -1,1 +1,1 @@
-# Template for Machine Learning projects
+# Titanic model in a flask api public at Heroku
